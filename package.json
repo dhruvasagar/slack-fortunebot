@@ -1,0 +1,23 @@
+{
+  "name": "fortunebot",
+  "version": "0.1.0",
+  "description": "Fortune Bot for Slack",
+  "main": "index.js",
+  "engines": {
+    "node": "6.2.1",
+    "npm": ">=3.3.0"
+  },
+  "scripts": {},
+  "author": "Dhruva Sagar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhruvasagar/slack-fortunebot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhruvasagar/slack-fortunebot/issues"
+  },
+  "dependencies": {
+    "slackbots": "^0.5.1"
+  }
+}
