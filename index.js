@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var SlackBot = require('slackbots');
 
 var randomly  = require('./lib/random');
@@ -14,9 +16,9 @@ FortuneBot.on('message', function(data) {
     randomly(0.7, function() {
       getFortune(function(error, stdout, stderr) {
         FortuneBot.postMessage(data.channel, stdout).then(function(res) {
-          console.log('Posted message', stdout, 'to channel', data.channel, 'successfully', res);
+          console.log(res);
         }).fail(function(err) {
-          console.error('Posting message', stdout, 'to channel', data.channel, 'failed!', err);
+          console.error(err);
         });
       });
     });
