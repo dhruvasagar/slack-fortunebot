@@ -11,7 +11,6 @@ var FortuneBot = new SlackBot({
 
 FortuneBot.on('message', function(data) {
   if (SlackEvent.isMessageEvent(data.type)) {
-    console.log(data);
     randomly(0.3, function() {
       getFortune(function(error, stdout, stderr) {
         FortuneBot.postMessage(data.channel, stdout).then(function(res) {
