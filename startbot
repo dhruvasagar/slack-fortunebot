@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ -f tmp/fortunebot.pid ] && cat tmp/fortunebot.pid | xargs kill -9
+node index.js 2>&1 >./log/fortune_bot.log &
+echo $! > tmp/fortunebot.pid
